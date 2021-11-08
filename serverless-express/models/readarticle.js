@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  const Read = sequelize.define("Read",
+  const ReadArticle = sequelize.define("ReadArticle",
   {
     user_id: {
       type: DataTypes.STRING,
@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     }
     }, {
     sequelize,
-    modelName: 'read',
+    modelName: 'readArticle',
     underscored: true,
   });
     
-  return Read;
+  return ReadArticle;
 };

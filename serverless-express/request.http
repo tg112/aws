@@ -2,7 +2,7 @@ POST http://localhost:3000/api/alerts
 Content-Type: application/json
 
 {
-  "title": "test post",
+  "title": "unread post",
   "service_id": "abc",
   "start_date": "20211108",
   "close_date": "20220101",
@@ -14,6 +14,11 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/alerts/1
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/alerts?user_id=1
 Content-Type: application/json
 
 ###

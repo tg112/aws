@@ -9,6 +9,13 @@ const {
 } = process.env;
 
 module.exports = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
-    host: DB_HOST,
-    dialect: DB_DIALECT
+  host: DB_HOST,
+  dialect: DB_DIALECT,
+    
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  },
 })
