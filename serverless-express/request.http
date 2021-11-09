@@ -1,8 +1,31 @@
-POST http://localhost:3000/users
+POST http://localhost:3000/api/alerts
 Content-Type: application/json
 
 {
-  "name": "sample",
-  "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+  "title": "unread post",
+  "service_id": "abc",
+  "start_date": "20211108",
+  "close_date": "20220101",
+  "label": "test",
+  "url": "localhost:3000",
+  "information_id": null,
+  "information_html": null
 }
+###
+
+GET http://localhost:3000/api/alerts/1
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/alerts?user_id=1
+Content-Type: application/json
+
+###
+
+
+
+POST http://localhost:3000/api/read?user_id=1&alert_id=1
+Content-Type: application/json
+
 ###
